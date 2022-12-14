@@ -74,6 +74,10 @@ const calculateResult = (amount, currencyPair) => {
 
 };
 
+const updateResultText = (amount, inputCurrency, result, outputCurrency) => {
+    const resultElement = document.querySelector(".js-result");
+    resultElement.innerText = `${amount} ${inputCurrency} = ${result.toFixed(2)} ${outputCurrency}`;
+}
 
 const onFormSubmit = (event) => {
     event.preventDefault();
@@ -83,16 +87,16 @@ const onFormSubmit = (event) => {
     const inputCurrencyElement = document.querySelector(".js-inputCurrency");
     const outputCurrencyElement = document.querySelector(".js-outputCurrency");
     const currencyPair = `${inputCurrencyElement.value}/${outputCurrencyElement.value}`;
-    const resultElement = document.querySelector(".js-result");
     const amount = amountElement.value;
-
+    const inputCurrency = inputCurrencyElement.value;
+    const outputCurrency = outputCurrencyElement.value;
     const result = calculateResult(amount, currencyPair)
 
     if (resultContainerElement.classList.contains("form__resultContainer")) {
         resultContainerElement.classList.remove("form__resultContainer");
     }
 
-    resultElement.innerText = `${amountElement.value} ${inputCurrencyElement.value} = ${result.toFixed(2)} ${outputCurrencyElement.value}`;
+    updateResultText(amount, inputCurrency, result, outputCurrency);
 
 };
 
