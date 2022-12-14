@@ -1,0 +1,25 @@
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+}
+
+.footer__link {
+    color: hsl(199, 16%, 20%);
+    text-decoration: none;
+    padding: 5px;
+}
+
+.footer__link:focus {
+    outline: 1px solid currentColor;
+}
+
+.footer__link:hover {
+    color: hsl(196, 42%, 39%);
+}
+
+.footer__link:active {
+    color: red;
+}
