@@ -74,35 +74,34 @@ const calculateResult = (amount, currencyPair) => {
 
 };
 
+const init = () => {
+    const formElement = document.querySelector(".js-form");
+
+    formElement.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const amountElement = document.querySelector(".js-amount");
+        const resultContainerElement = document.querySelector(".js-resultContainer");
+        const inputCurrencyElement = document.querySelector(".js-inputCurrency");
+        const outputCurrencyElement = document.querySelector(".js-outputCurrency");
+        const currencyPair = `${inputCurrencyElement.value}/${outputCurrencyElement.value}`;
+        const resultElement = document.querySelector(".js-result");
+        const amount = amountElement.value;
+
+        const result = calculateResult(amount, currencyPair)
+
+        if (resultContainerElement.classList.contains("form__resultContainer")) {
+            resultContainerElement.classList.remove("form__resultContainer");
+        }
+
+        resultElement.innerText = `${amountElement.value} ${inputCurrencyElement.value} = ${result.toFixed(2)} ${outputCurrencyElement.value}`;
+
+    });
+};
+
+init();
 
 
-let amountElement = document.querySelector(".js-amount");
-let inputCurrencyElement = document.querySelector(".js-inputCurrency");
-let outputCurrencyElement = document.querySelector(".js-outputCurrency");
-let resultElement = document.querySelector(".js-result");
-let formElement = document.querySelector(".js-form");
 
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let currencyPair = `${inputCurrencyElement.value}/${outputCurrencyElement.value}`; 
-   
-let amount = amountElement.value;
-let result = amount * rate;
-
-resultElement.innerText = `${amountElement.value} ${inputCurrencyElement.value} = ${result.toFixed(2)} ${outputCurrencyElement.value}`;
-   
-
-});
-
-let resultContainerElement = document.querySelector(".js-resultContainer");
-let form__buttonElement = document.querySelector(".js-form__button");
-
-form__buttonElement.addEventListener ("click", () => {
-    if(resultContainerElement.classList.contains("form__resultContainer")){
-        resultContainerElement.classList.remove("form__resultContainer");} 
-
-});
 
 
