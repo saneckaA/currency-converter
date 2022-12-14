@@ -74,29 +74,32 @@ const calculateResult = (amount, currencyPair) => {
 
 };
 
+
+const onFormSubmit = (event) => {
+    event.preventDefault();
+
+    const amountElement = document.querySelector(".js-amount");
+    const resultContainerElement = document.querySelector(".js-resultContainer");
+    const inputCurrencyElement = document.querySelector(".js-inputCurrency");
+    const outputCurrencyElement = document.querySelector(".js-outputCurrency");
+    const currencyPair = `${inputCurrencyElement.value}/${outputCurrencyElement.value}`;
+    const resultElement = document.querySelector(".js-result");
+    const amount = amountElement.value;
+
+    const result = calculateResult(amount, currencyPair)
+
+    if (resultContainerElement.classList.contains("form__resultContainer")) {
+        resultContainerElement.classList.remove("form__resultContainer");
+    }
+
+    resultElement.innerText = `${amountElement.value} ${inputCurrencyElement.value} = ${result.toFixed(2)} ${outputCurrencyElement.value}`;
+
+};
+
 const init = () => {
     const formElement = document.querySelector(".js-form");
 
-    formElement.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        const amountElement = document.querySelector(".js-amount");
-        const resultContainerElement = document.querySelector(".js-resultContainer");
-        const inputCurrencyElement = document.querySelector(".js-inputCurrency");
-        const outputCurrencyElement = document.querySelector(".js-outputCurrency");
-        const currencyPair = `${inputCurrencyElement.value}/${outputCurrencyElement.value}`;
-        const resultElement = document.querySelector(".js-result");
-        const amount = amountElement.value;
-
-        const result = calculateResult(amount, currencyPair)
-
-        if (resultContainerElement.classList.contains("form__resultContainer")) {
-            resultContainerElement.classList.remove("form__resultContainer");
-        }
-
-        resultElement.innerText = `${amountElement.value} ${inputCurrencyElement.value} = ${result.toFixed(2)} ${outputCurrencyElement.value}`;
-
-    });
+    formElement.addEventListener("submit", onFormSubmit);
 };
 
 init();
