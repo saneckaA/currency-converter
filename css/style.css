@@ -11,4 +11,9 @@ html {
     margin: 0 auto;
     padding: 0 10px;
     background-color: white;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
 }
