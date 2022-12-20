@@ -5,7 +5,7 @@ In this project I made a currency converter which allows you to convert 5 curren
 After clicking a button the result will be shown.
 Exchange rates are from 6th December 2022.
 
-!(images/Animation-currency.gif)
+![Currency converter] (images/Animation-currency.gif)
 
 ## Technologies used in this project:
 
