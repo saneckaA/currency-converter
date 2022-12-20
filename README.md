@@ -1,5 +1,7 @@
 # Currency converter
 
+!(currencylogo.png)
+
 ## Description
 In this project I made a currency converter which allows you to convert 5 currencies such as PLN, USD, NZD, WON and EUR. 
 After clicking a button the result will be shown.
