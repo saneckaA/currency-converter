@@ -1,7 +1,5 @@
 # Currency converter
 
-![](https://github.com/saneckaA/currency-converter/blob/main/images/currencylogo-horizontal.png?raw=true)
-
 ## Description
 In this project I made a currency converter which allows you to convert 5 currencies such as PLN, USD, NZD, WON and EUR. 
 After clicking the button the result will be shown.
