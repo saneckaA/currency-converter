@@ -7,7 +7,7 @@ Exchange rates are from 6th December 2022 from National Bank of Poland.
 
 ## How it works:
 
-![](https://github.com/saneckaA/currency-converter/blob/main/images/Animation-currency.gif?raw=true)
+![](https://github.com/saneckaA/currency-converter/blob/main/images/Animation-converter.gif?raw=true)
 
 ## Technologies used in this project:
 
