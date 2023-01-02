@@ -1,3 +1,4 @@
+{
 const calculateResult = (amount, currencyPair) => {
 
     const ratePLNUSD = 0.22;
@@ -113,6 +114,7 @@ const init = () => {
 
 init();
 
+}
 
 
 
