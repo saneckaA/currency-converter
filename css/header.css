@@ -1,10 +1,6 @@
 .header {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-}
-
-.header:hover {
-    color: rgb(27, 99, 18);
 }
