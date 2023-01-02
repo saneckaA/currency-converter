@@ -21,55 +21,55 @@ const calculateResult = (amount, currencyPair) => {
 
     switch (currencyPair) {
         case "PLN/USD":
-            return amount / ratePLNUSD;
+            return amount * ratePLNUSD;
 
         case "PLN/NZD":
-            return amount / ratePLNNZD;
+            return amount * ratePLNNZD;
 
         case "PLN/WON":
-            return amount / ratePLNWON;
+            return amount * ratePLNWON;
 
         case "PLN/EUR":
-            return amount / ratePLNEUR;
+            return amount * ratePLNEUR;
 
         case "USD/PLN":
-            return amount / rateUSDPLN;
+            return amount * rateUSDPLN;
 
         case "USD/NZD":
-            return amount / rateUSDNZD;
+            return amount * rateUSDNZD;
 
         case "USD/WON":
-            return amount / rateUSDWON;
+            return amount * rateUSDWON;
 
         case "USD/EUR":
-            return amount / rateUSDEUR;
+            return amount * rateUSDEUR;
 
         case "WON/PLN":
-            return amount / rateWONPLN;
+            return amount * rateWONPLN;
 
         case "WON/USD":
-            return amount / rateWONUSD;
+            return amount * rateWONUSD;
 
         case "WON/NZD":
-            return amount / rateWONNZD;
+            return amount * rateWONNZD;
 
         case "WON/EUR":
-            return amount / rateWONEUR;
+            return amount * rateWONEUR;
 
         case "EUR/PLN":
-            return amount / rateEURPLN;
+            return amount * rateEURPLN;
 
         case "EUR/USD":
-            return amount / rateEURUSD;
+            return amount * rateEURUSD;
 
         case "EUR/NZD":
-            return amount / rateEURNZD;
+            return amount * rateEURNZD;
 
         case "EUR/WON":
-            return amount / rateEURWON;
+            return amount * rateEURWON;
 
         default:
-            return amount / ratedefault;
+            return amount * ratedefault;
 
     }
 
