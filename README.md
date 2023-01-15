@@ -16,6 +16,6 @@ Exchange rates are from 6th December 2022 from National Bank of Poland.
 - JavaScript
 - BEM
 
-## You can check it out in here:
+## You can check it out here:
 
 [https://saneckaa.github.io/currency-converter/](https://saneckaa.github.io/currency-converter/)
